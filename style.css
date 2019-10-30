@@ -1,178 +1,61 @@
-*{
-    margin:0px;
-    padding:0px;
-}
 body{
-    background: linear-gradient(to right, rgb(81, 172, 8) 0%, rgba(41,184,229,1) 50%, rgb(58, 109, 66) 100%);
-}
-#gen-btn
-{
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
-    font-weight: bold;
-    background: bisque;
-    font-size: 11px;
-    
-    text-align: center;
-    border-radius: 25px;
+    margin:0;
+    padding:0;
 }
 .container{
+    width:100%;
+    height:100vh;
+    /*background-color: tan;*/
+    background-color: #c21cf1;
+    background-image: linear-gradient(315deg, #89aa4c 0%, #8697e5 74%);
+    padding-top:80px;
+}
+.string-box{
     width:70%;
-    margin: 0 auto;
-    background-color:rgba(134, 134, 133, 0.788);
-    min-height:450px;
-    margin-top:70px;
-    border-radius:10px;
-    padding:15px;
+    margin:0 auto;
+    height:70vh;
+    background-color: white;
+    border-radius:7px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
 }
-.btngen-area{
-    min-height: 100px;
-    text-align:center;
-    margin-top:30px;
-}
-.btngen-area button{
-    font-size:16px;
-    padding:1px 6px 1px 6px;
-    border-color:#dddddd;
-}
-.instruc-sec{
-    height:350px;
-    padding:15px;
-}
-.first-row{
-    height:80px;
+.counter-section{
     width:100%;
+    height:10vh;
+    background-color:#0b736ecf;
+    color:white;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding:15px 25px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
-    box-sizing: border-box;
-    padding:5px;
+    justify-content: space-between;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
 }
-.first-row-col1{
-    flex:2;
-    border-right:1px solid grey;
-    height:70px;
-    padding:10px;
-    padding-top:20px;
-    box-sizing: border-box;
-}
-.first-row-col2{
-    flex:1;
-    border-right:1px solid grey;
-    height:70px;
-    padding:30px;
-    padding-top:20px;
-    padding-left:70px;
-    box-sizing: border-box;
-}
-.first-row-col3{
-    flex:2;
-    height:70px;
-    padding-top:20px;
-    padding-left:50px;
-    box-sizing: border-box;
-}
-.first-row-col1 .label-inp{
-    width:180px;
-    height:25px;
-    padding:5px;
-    outline: none;
-    border:1px solid grey;
-    border-radius:5px;
-}
-.first-row-col2 input{
-    width:60px;
-    height:25px;
-    padding:5px;
-    outline: none;
-    border:1px solid grey;
-    border-radius:5px;
-}
-.second-row{
-    height:80px;
+.textarea{
     width:100%;
-    display: flex;
-    justify-content: space-around;
+    height:60vh;
+    background-color: #dcfff0;
+    padding:0px;
+    margin:0px;
     box-sizing: border-box;
-    padding:5px;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
 }
-.second-row .second-row-col1{
-    flex:2;
-    border-right:1px solid grey;
-    padding:10px;
-    padding-top:20px;
-}
-.second-row .second-row-col2{
-    flex:1;
-    padding:10px;
-    padding-top:20px;
-    box-sizing: border-box;
-}
-.second-row .second-row-col1 label{
-    margin-right:20px;
-}
-.second-row .second-row-col1 input{
-    width:60px;
-    height:25px;
-    padding:5px;
-    margin-right:15px;
-    border:1px solid grey;
-    border-radius: 5px;
-    outline: none;
-}
-.third-row{
-    height:80px;
+.text-area{
     width:100%;
-    display: flex;
-    justify-content: space-around;
+    height:60vh;
+    outline: none;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    padding-right:20px;
     box-sizing: border-box;
-    padding:5px;
-}
-.third-row-col1{
-    flex:1;
-    border-right:1px solid grey;
-    padding:10px;
-    padding-top:20px;
-}
-.third-row-col2{
-    flex:1;
-    border-right:1px solid grey;
-    padding:10px;
-    padding-top:20px;
-}
-.third-row-col3{
-    flex:2;
-    padding:10px;
-    padding-top:20px;
-}
-.third-row-col1 input{
-    width:50px;
-    height:25px;
-}
-.third-row-col2 input{
-    width:60px;
-    height:25px;
-    padding:5px;
-    margin-right:15px;
-    border:1px solid grey;
-    border-radius: 5px;
-    outline: none;
-}
-.third-row-col3 input{
-    width:60px;
-    height:25px;
-    padding:5px;
-    margin-right:15px;
-    border:1px solid grey;
-    border-radius: 5px;
-    outline: none;
-}
-.gen-code-btn{
-    height:25px;
-    padding-left:5px;
-    padding-right:5px;
-    text-align:center;
-    margin-left:45%;
-    margin-top:40px;
-    cursor: pointer;
+    background-color: cornsilk;
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    border:1px solid cornsilk;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
 }

@@ -1,99 +1,34 @@
-﻿<html>
+<!DOCTYPE html>
+<html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        
+        <title>Counter</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
-            <div class="btngen-area" id="gensection">
-                <button class="but" id="resbut">Default Label</button>
+        <div class = "container">
+            <div class = "string-box">
+                <div class = "counter-section">
+                    <div class = "characters">
+                        <label>Characters: </label><span id = "character-count">0</span>
+                    </div>
+                    <div class = "words">
+                        <label>Words: </label><span id = "word-count">0</span>
+                    </div>
+                    <div class = "whitespaces">
+                        <label>Whitespaces: </label><span id = "whitespace-count">0</span>
+                    </div>
+                    <div class = "lines">
+                        <label>Lines: </label><span id = "line-count">0</span>
+                    </div>
+                </div>
+                <div class = "textarea">
+                    <textarea name = "text-area" class = "text-area" id = "text-area"></textarea>
+                </div>
             </div>
-            <hr>
-            <section class="instruc-sec">
-                <form>
-                    <div class="first-row">
-                        <div class="first-row-col1">
-                            <label>Button Label:</label>
-                            <input type="text" onkeyup="change()" id="btn-label" class="label-inp">
-                        </div>
-                        <div class="first-row-col2">
-                            <label>Font Size:</label>
-                            <input type="number" onkeyup="change()" min="8" max="50" name="font-size" id="font-size">
-                        </div>
-                        <div class="first-row-col3">
-                            <label>Font Color:</label>
-                            <input type="color" name="font-color" onchange="change()" id='font-color'value="#000000">
-                        </div>
-                    </div>
-                    <div class="second-row">
-                        <div class="second-row-col1">
-                            <label>Padding-Top-Right-Bottom-Left: </label>
-                            <input type="number" min="0" max="24" name="padding-top" id="paddingtop" onkeyup="change()">
-                            <input type="number" min="0" max="48" name="padding-right" id="paddingright" onkeyup="change()">
-                            <input type="number" min="0" max="24" name="padding-bottom" id="paddingbottom" onkeyup="change()">
-                            <input type="number" min="0" max="48" name="padding-left" id="paddingleft" onkeyup="change()">
-                        </div>
-                        <div class="second-row-col2">
-                            <label>Background-Color: </label>
-                            <input type="color" name="bg-color" value="#adaeae" id="bg-color" onchange="return change()">
-                        </div>
-                    </div>
-                    <div class="third-row">
-                        <div class="third-row-col1">
-                            <label>Border Color: </label>
-                            <input type="color" name="border-color" value="#dddddd" id="border-color" onchange="return change()">
-                        </div>
-                        <div class="third-row-col2">
-                            <label>Border Width: </label>
-                            <input type="number" min="0" max="50" name="border-width" id="border-width" onkeyup="return change()">
-                        </div>
-                        <div class="third-row-col3">
-                            <label>Border Radius: </label>
-                            <input type="number" min="0" max="50" name="border-radius" id="border-radius" onkeyup="return change()">
-                        </div>
-                    </div>
-                    <button class="gen-code-btn" id="gen-btn" onclick="code()">Generate Code</button>
-                </form>
-
-                <div id="demo"></div>
-            </section>   
         </div>
-        <script>
-        var btn = document.getElementById("resbut");
-
-        var btn_label = document.getElementById('btn-label');
-        var font_size = document.getElementById('font-size');
-        var font_color = document.getElementById('font-color');
-        var pad_bottom = document.getElementById('paddingbottom');
-        var pad_left = document.getElementById('paddingleft');
-        var pad_right = document.getElementById('paddingright');
-        var pad_top = document.getElementById('paddingtop');
-        var bg_color = document.getElementById('bg-color');
-        var border_color = document.getElementById('border-color');
-        var border_width = document.getElementById('border-width');
-        var border_radius =document.getElementById('border-radius');
-        var elem = document.getElementById("s1");
-         alert(elem.style.cssText);
-function change(){
-        btn.textContent = btn_label.value;
-        btn.style.fontSize = font_size.value+"px";
-        btn.style.color = font_color.value;
-        btn.style.paddingBottom = pad_bottom.value+'px';
-        btn.style.paddingLeft = pad_left.value+'px';
-        btn.style.paddingRight = pad_right.value+'px';
-        btn.style.paddingTop = pad_top.value+'px';
-        btn.style.background = bg_color.value;
-        btn.style.borderColor = border_color.value;
-        btn.style.borderWidth = border_width.value+'px';
-        btn.style.borderRadius = border_radius.value+'px';
-    
-}
-function code()
-{
-    alert(document.getElementById("resbut").style.cssText);
-}
-
-
-        </script>
+        <script src = "script.js"></script>
     </body>
 </html>
