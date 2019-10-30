@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pig Dice Game</title>
+    <title>Accordion</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,69 +16,47 @@
     />
   </head>
   <body>
-    <div class="container">
-      <!-- Player 1 -->
-      <div class="player active" id="player-one">
-        <!-- Player Name -->
-        <div class="player-wrapper">
-          <p id="player-1">Player 1</p>
-          <div class="dot1" id="dot1"></div>
-          <p class="score" id="one-main-score">0</p>
-        </div>
-        <!-- Player Current Score -->
-        <div class="score-box">
-          <p>Current</p>
-          <p class="c-score" id="one-current-score">0</p>
-        </div>
+    <div class="wrapper">
+      <button class="accordion">The Angry Birds</button>
+      <div class="panel">
+        <ul class="list">
+          <li>Angry Birds</li>
+          <li>Angry Bird Space - 2012</li>
+          <li>Angry Bird Star Wars - 2012</li>
+          <li>Angry Bird Star Wars 2 -2013</li>
+        </ul>
       </div>
-      <!-- ---------------------------- -->
 
-      <!-- Player 2 -->
-      <div class="player" id="player-two">
-        <!-- Player Name -->
-        <div class="player-wrapper">
-          <p id="player-2">Player 2</p>
-          <div class="dot2" id="dot2"></div>
-          <p class="score" id="two-main-score">0</p>
-        </div>
-        <!-- Player Current Score -->
-        <div class="score-box">
-          <p>Current</p>
-          <p class="c-score" id="two-current-score">0</p>
-        </div>
+      <button class="accordion">Angry Birds 1</button>
+      <div class="panel">
+        <ul class="list">
+          <li>Angry Birds Go - 2014</li>
+          <li>Angry Birds Fight - 2015</li>
+          <li>Angry Birds Transform -2015</li>
+        </ul>
       </div>
-      <!-- ---------------------------- -->
 
-      <div class="center">
-        <!-- New Game Button -->
-        <button id="new-game-btn">
-          <ion-icon name="ios-add-circle-outline" class="icon"></ion-icon>
-          <p>New Game</p>
-        </button>
-        <!-- -------------------------- -->
+      <button class="accordion">Angry Birds 2</button>
+      <div class="panel">
+        <ul class="list">
+          <li>Angry Birds 2 - 2015</li>
+          <li>Angry Birds Action! - 2016</li>
+          <li>Angry Birds Blast - 2016</li>
+        </ul>
+      </div>
 
-        <!-- Dice Image -->
-        <img src="" alt="Dice" class="dice" id="dice-img" />
-        <!-- -------------------------- -->
-
-        <div class="bottom-btn">
-          <!-- Roll Dice Button -->
-          <button id="roll-dice">
-            <ion-icon name="ios-sync" class="icon"></ion-icon>
-            <p>Roll Dice</p>
-          </button>
-          <!-- ------------------------------- -->
-
-          <!-- Hold Button -->
-          <button id="hold">
-            <ion-icon name="ios-download" class="icon"></ion-icon>
-            <p>Hold</p>
-          </button>
-          <!-- ------------------------------- -->
-        </div>
+      <button class="accordion">The Angry Birds 2</button>
+      <div class="panel">
+        <ul class="list">
+          <li>Angry Bird Evolution</li>
+          <li>Angry Bird Dream Blast - 2019</li>
+          <li>Angry Birds VR/AR - 2019</li>
+          <li>Angry Birds Heros Unreleased</li>
+        </ul>
       </div>
     </div>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <img src="./img/image.png" class="img1" alt="" />
+    <img src="./img/image2.png" class="img2" alt="" />
     <script src="index.js"></script>
   </body>
 </html>

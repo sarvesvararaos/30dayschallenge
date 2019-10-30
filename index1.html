@@ -1,19 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <style>
+        li{color: white;}
+        
+
+        body{
+            background: linear-gradient(rgb(46, 13, 13),rgb(230, 31, 31),rgb(218, 218, 116));
+            color: white;
+        }
+    .list {
+  list-style: none;
+  text-align: left;
+  padding: 5px 18px;
+}
+
+.list li {
+
+  font-size: 14px;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #b3a3a3;
+}
+.list li:last-child {
+  border-bottom: none;}
+    
+        :focus, :active { outline:0; }
+
+        #accordion { 
+            width:500px; 
+            margin-top: 13%;
+            font:normal normal 13px sans-serif; 
+            color:rgb(255, 255, 255); 
+            padding: 20px;
+        }
+
+        #accordion h3 {
+            padding:10px; 
+            -webkit-border-radius:3px; 
+            border-radius:3px;
+            -moz-box-shadow:0 1px 4px rgb(187, 44, 44); 
+            -webkit-box-shadow:0 1px 4px rgb(117, 0, 0); 
+            box-shadow:0 1px 4px rgb(128, 9, 9); 
+            margin:3px 0; 
+            cursor:pointer;
+        }
+
+        #accordion div {
+            margin:0 0 0 10px; 
+            padding:10px; 
+            border:solid 1px #F6F6F6; 
+            height:auto;
+        }
+
+        img {
+  position: absolute;
+  height: 100%;
+}
+.img1 {
+    top:-1%;
+width:60%;
+height:50%;
+  right: 2%;
+}
+.img2 {
+width:50%;
+top:15%;
+height:90%;
+  right: 6%;
+}
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 </head>
+
 <body>
-    <input type="button" value="Default value"id="btn">
-    <input type="color" name="clr" id="">
-    <input type="number" name="num" id="num" placeholder="0">
-    <script>
-    var but=document.getElementById("btn");
-    var style=document.style.color("red");
-but.appendChild(style);
-    </script>
+    
+
+    <div id="accordion">
+    
+        <h3>The Angry Birds</h3>
+            <ul class="list">
+          <li>Angry Birds</li>
+          <li>Angry Bird Space - 2012</li>
+          <li>Angry Bird Star Wars - 2012</li>
+          <li>Angry Bird Star Wars 2 -2013</li>
+        </ul>
+            
+        <h3>Angry Birds 1</h3>
+        <ul class="list">
+                <li>Angry Birds Go - 2014</li>
+                <li>Angry Birds Fight - 2015</li>
+                <li>Angry Birds Transform -2015</li>
+              </ul>
+            
+        <h3>Angry Birds 2</h3>
+        <ul class="list">
+                <li>Angry Birds 2 - 2015</li>
+                <li>Angry Birds Action! - 2016</li>
+                <li>Angry Birds Blast - 2016</li>
+              </ul>
+            
+        <h3>The Angry Birds 2</h3>
+        <ul class="list">
+                <li>Angry Bird Evolution</li>
+                <li>Angry Bird Dream Blast - 2019</li>
+                <li>Angry Birds VR/AR - 2019</li>
+                <li>Angry Birds Heros Unreleased</li>
+              </ul>
+              </div>
+            
+              <img src="./img/image.png" class="img1" alt="" />
+              <img src="./img/image2.png" class="img2" alt="" />
 </body>
+
+<script>
+    $(document).ready(function () {
+        // jQuery FUNCTION.
+        $("#accordion").accordion({
+            heightStyle: "content"
+        });
+    });
+    // EXPAND AND COLLAPSE MENUS ON “HEADER CLICK”
+    $("#accordion h3").click(function () {
+        $("#accordion h3").animate({ 'background-color': '#cc3300' }, 300);
+        $("#accordion h3").css({ 'color': '#000' });
+
+        // HIGHLIGHT THE SELECTED HEADER (BLOCK)
+        $(this).animate({ 'background-color': '#990000' }, 300);
+        $(this).css({ 'color': '#FFF' });
+    });
+</script>
 </html>
