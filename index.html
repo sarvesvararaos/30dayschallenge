@@ -1,34 +1,84 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Counter</title>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class = "container">
-            <div class = "string-box">
-                <div class = "counter-section">
-                    <div class = "characters">
-                        <label>Characters: </label><span id = "character-count">0</span>
-                    </div>
-                    <div class = "words">
-                        <label>Words: </label><span id = "word-count">0</span>
-                    </div>
-                    <div class = "whitespaces">
-                        <label>Whitespaces: </label><span id = "whitespace-count">0</span>
-                    </div>
-                    <div class = "lines">
-                        <label>Lines: </label><span id = "line-count">0</span>
-                    </div>
-                </div>
-                <div class = "textarea">
-                    <textarea name = "text-area" class = "text-area" id = "text-area"></textarea>
-                </div>
-            </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pig Dice Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Player 1 -->
+      <div class="player active" id="player-one">
+        <!-- Player Name -->
+        <div class="player-wrapper">
+          <p id="player-1">Player 1</p>
+          <div class="dot1" id="dot1"></div>
+          <p class="score" id="one-main-score">0</p>
         </div>
-        <script src = "script.js"></script>
-    </body>
+        <!-- Player Current Score -->
+        <div class="score-box">
+          <p>Current</p>
+          <p class="c-score" id="one-current-score">0</p>
+        </div>
+      </div>
+      <!-- ---------------------------- -->
+
+      <!-- Player 2 -->
+      <div class="player" id="player-two">
+        <!-- Player Name -->
+        <div class="player-wrapper">
+          <p id="player-2">Player 2</p>
+          <div class="dot2" id="dot2"></div>
+          <p class="score" id="two-main-score">0</p>
+        </div>
+        <!-- Player Current Score -->
+        <div class="score-box">
+          <p>Current</p>
+          <p class="c-score" id="two-current-score">0</p>
+        </div>
+      </div>
+      <!-- ---------------------------- -->
+
+      <div class="center">
+        <!-- New Game Button -->
+        <button id="new-game-btn">
+          <ion-icon name="ios-add-circle-outline" class="icon"></ion-icon>
+          <p>New Game</p>
+        </button>
+        <!-- -------------------------- -->
+
+        <!-- Dice Image -->
+        <img src="" alt="Dice" class="dice" id="dice-img" />
+        <!-- -------------------------- -->
+
+        <div class="bottom-btn">
+          <!-- Roll Dice Button -->
+          <button id="roll-dice">
+            <ion-icon name="ios-sync" class="icon"></ion-icon>
+            <p>Roll Dice</p>
+          </button>
+          <!-- ------------------------------- -->
+
+          <!-- Hold Button -->
+          <button id="hold">
+            <ion-icon name="ios-download" class="icon"></ion-icon>
+            <p>Hold</p>
+          </button>
+          <!-- ------------------------------- -->
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

@@ -1,1 +1,1 @@
-# 30dayschallenge
+# Dice-game
